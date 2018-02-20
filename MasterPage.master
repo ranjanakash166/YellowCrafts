@@ -1,0 +1,297 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+ 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===========================
+  
+    SITE TITLE
+    =========================== -->
+    <title>YellowCrafts</title>
+    
+    <!-- ===========================
+    FAVICONS
+    =========================== -->
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
+    
+  
+  
+
+    <link href="css/footer-distributed-with-contact-form.css" rel="stylesheet" />
+    <!-- ===========================
+    STYLESHEETS
+    =========================== --> 
+   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">        
+    <link href="css/footer-distributed-with-address-and-phones.css" rel="stylesheet" />
+      
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link href="css/Footer-with-button-logo.css" rel="stylesheet" />
+    
+    <!-- ===========================
+    FONTS
+    =========================== -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,600|Pacifico' rel='stylesheet' type='text/css' />
+    
+    <!-- ===========================
+    GOOGLE ANALYTICS (Optional)
+    =========================== -->
+        
+    <!-- #NOTE: Replace this line with your analytics code -->
+    
+    <!--ANALYTICS END-->
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (e.ctrlKey &&
+            (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)) {
+                alert('You are not allowed to do this');
+                return false;
+            } else {
+                return true;
+            }
+        };
+    </script>
+
+    
+   
+
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  
+  
+    <div class="row">
+
+        <nav class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+            
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-admin">
+                        <span class="sr-only">Toggle Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"></a>
+                    <img src="logo.jpeg" style="height:83px;" id="akash">
+                </div><!--/.navbar-header -->
+                <div class="collapse navbar-collapse" id="navbar-admin">
+                 <!---------------------------------MENU--------------------------------->
+                    <ul class="nav navbar-nav">
+                        <li><a href="user/display_item.aspx"><span class="glyphicon glyphicon-dashboard"></span><p style="color:red;font:bold 20px arial,verdana">Today's Deals</p></a></li>
+                        <li><a href="user/display_item.aspx"><span class="glyphicon glyphicon-bullhorn"></span> <p style="color:red;font:bold 20px arial,verdana">Products</p></a></li>
+                        <li><a href="user/display_item.aspx"><span class="glyphicon glyphicon-user"></span><p style="color:red;font:bold 20px arial,verdana" >Customer Services</p></a></li>
+                        <li><a href="user/login1.aspx" class="hidden-lg hidden-md"><span class="glyphicon glyphicon-lock"></span> Log In</a></li>
+                        <li><a href="user/registration.aspx" class="hidden-lg hidden-md"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a></li>
+                    </ul>
+                    
+                <!---------------------------------LOGIN - SIGNUP--------------------------------->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-sm hidden-xs">
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            <button type="button" class="btn btn-success navbar-btn">
+                                <a href="user/login1.aspx" class="link-button-color"><span class="glyphicon glyphicon-lock"></span> Log In</a>
+                            </button>
+                            <button type="button" class="btn btn-danger navbar-btn">
+                                <a href="user/registration.aspx" class="link-button-color"><span class="glyphicon glyphicon-pencil" ></span> Sign Up</a>
+                            </button>
+
+                               <button type="button" class="btn btn-danger navbar-btn">
+                                <a href="user/display_order.aspx" class="link-button-color"><span class="glyphicon glyphicon-pencil" ></span>Order_Details</a>
+                                   
+                              </button>
+                        </li>
+                        
+                      </ul>
+
+                  
+                    
+                <!---------------------------------SEARCH--------------------------------->
+              
+             </div><!--/.container-fluid -->
+        </nav><!--/.navbar -->
+     
+<%--  --%>
+    </div>
+
+
+   
+   
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+  
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    
+               
+   
+      <div id="subscribe">
+        <div class="darkoverlay">
+            <div class="container text-center">
+                <img class="santaicon wow tada infinite" data-wow-duration="60s" src="img/santa-sm.png" alt="" height="200" width="200" >
+                <div class="sectionhead">            
+                    <h2>Don’t miss the <span class="highlight">upcoming hot deals</span> Anymore</h2>
+                    <p>Just give us your email address below, and forget it. We’ll send you every time we have something special for you. No worries, We never send spam mails. And you can unsubscribe anytime as well.</p>    
+                </div><!--SECTIONHEAD END-->            
+
+             
+                <div class="mailchimp">
+                    <form>
+                                                      
+                            <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="First Name" required>
+                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required>
+                            <input href="subscribe.aspx" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-inverse">
+                    </form>
+                </div>
+            </div><!--SUBSCRIBE CONTAINER END-->
+        </div><!--OVERLAY END-->
+     
+        <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="logo"><a href="#"> YellowCrafts </a></h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Get started</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Sign up</a></li>
+                     
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>About us</h5>
+                        <ul>
+                            <li><a href="member.aspx">Company Information</a></li>
+                            <li><a href="member.aspx">Contact us</a></li>
+                            <li><a href="#">Reviews</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="member.aspx">Help desk</a></li>
+                            <li><a href="#">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="social-networks">
+                            <a href="https://twitter.com/creativeshashi" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/creativeshashigupta/" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="mailto:yellowcraftscare@gmail.com" class="google"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <button  href="member.aspx" type="button" class="btn btn-default">Contact us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p style="color:red; font-size:large">© 2017 Copyright YellowCrafts</p>
+                <p style="color:red; font-size:large">Designed & Developed by <a href="https://www.facebook.com/akash.ranjan.9883"> AKASH RANJAN</a> Webmaster IETE BIT MESRA RANCHI-835215</p>
+                <br/>
+                <p style="color:red; font-size:large">For Any Queries Related to Products & Prices contact <a href="https://www.facebook.com/creativeshashigupt1?fref=ts"> SHASHI GUPTA</a> (9060450743) (7254888235) CEO cum Senior-Artist @YellowCrafts</p>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+    <div class="sticky-container">
+		<ul class="sticky">
+			<li>
+				<a href="https://www.facebook.com/creativeshashigupta/">
+                    <img title="" alt="" src="img/facebook.svg" />
+                    <p>Facebook</p>
+				</a>
+			</li>
+			
+			<li>
+				<a href="https://twitter.com/creativeshashi">
+                    <img title="" alt="" src="img/twitter.svg" />
+                    <p>Twitter</p>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="https://www.linkedin.com/in/yellow-crafts-5a4729128/?trk=nav_responsive_tab_profile">
+                    <img title="" alt="" src="img/linkedin.svg" />
+                    <p>Linkedin</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="https://www.youtube.com/channel/UC-lFmQCo438vAg7pm4UNh_w">
+                    <img title="" alt="" src="img/youtubehover.png" />
+                    <p>YouTube</p>
+				</a>
+			</li>
+			
+			<li>
+			    <a href="https://www.instagram.com/yellow_crafts/?hl=en">
+                    <img title="" alt="" src="img/instagram.svg" />
+                    <p>Instagram</p>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== --> 
+ 
+   
+    <script src="js/snowstorm-min.js"></script>
+
+     <script>
+         $("#akash").wrap($('<a>', {
+             href: 'Default.aspx'
+         }));
+     </script> 
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/58c6bcca5b89e2149e1610af/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+    
+</body>
+</html>
